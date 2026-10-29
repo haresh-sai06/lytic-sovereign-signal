@@ -1,7 +1,7 @@
 # LYTIC — Sovereign Signal
 
-- Repo: REPO_URL
-- Production: PROD_URL
+- Repo: https://github.com/haresh-sai06/lytic-sovereign-signal
+- Production: https://lytic-web.vercel.app
 
 ## Run locally
 ```bash
