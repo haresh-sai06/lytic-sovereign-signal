@@ -25,7 +25,7 @@ export default function Team() {
 
           <div className="lg:col-span-8 space-y-10">
             {/* Leadership: CEO big first, Founder second */}
-            <div className="grid gap-5 md:grid-cols-12">
+            <div className="grid items-start gap-5 md:grid-cols-12">
               <motion.figure
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ export default function Team() {
                 transition={{ duration: 0.9, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
                 className="group md:col-span-5"
               >
-                <div className="relative aspect-[3/4] overflow-hidden bg-mist md:aspect-auto md:h-full md:min-h-[280px]">
+                <div className="relative aspect-[4/3] overflow-hidden bg-mist">
                   <Image
                     src={founder.img}
                     alt={founder.name}
