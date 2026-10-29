@@ -6,8 +6,8 @@ export const CONTACT = {
 };
 export const IDS = { udyam: "UDYAM-TN-11-0133943", duns: "DR102420263506001122", founded: "17 Feb 2023" };
 export const TEAM = [
-  { name: "Er. Rubathiyagish V V", role: "Founder", meta: "B.Plan · Spatial Systems & Supply Chain Strategy", img: "/team/rupath.jpg", featured: "founder" as const },
   { name: "Er. Vividhan L", role: "CEO & Co-Founder", meta: "B.Tech IT · Platform Architecture & Cloud", img: "/team/vividhan.png", featured: "ceo" as const },
+  { name: "Er. Rubathiyagish V V", role: "Founder", meta: "B.Plan · Spatial Systems & Supply Chain Strategy", img: "/team/rupath.jpg", featured: "founder" as const },
   { name: "Er. SivaKumar B", role: "Mobile App", meta: "Shift Driver Client", img: "/team/sivakumar.jpeg" },
   { name: "Er. Darshini B", role: "Web Production", meta: "ERP & Web", img: "/team/darshini.png" },
   { name: "Er. Haresh Sainaath S", role: "AI & Cloud Systems", meta: "B.E. CSE (AI&ML), SKCT", img: "/team/haresh.jpeg" },

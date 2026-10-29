@@ -4,8 +4,8 @@ import { motion } from "motion/react";
 import { TEAM } from "@/lib/content";
 
 export default function Team() {
-  const founder = TEAM.find((p) => p.featured === "founder")!;
   const ceo = TEAM.find((p) => p.featured === "ceo")!;
+  const founder = TEAM.find((p) => p.featured === "founder")!;
   const rest = TEAM.filter((p) => !p.featured);
 
   return (
@@ -24,7 +24,7 @@ export default function Team() {
           </h2>
 
           <div className="lg:col-span-8 space-y-10">
-            {/* Leadership row: Founder (big) + CEO */}
+            {/* Leadership: CEO big first, Founder second */}
             <div className="grid gap-5 md:grid-cols-12">
               <motion.figure
                 initial={{ opacity: 0, y: 30 }}
@@ -35,18 +35,18 @@ export default function Team() {
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-mist">
                   <Image
-                    src={founder.img}
-                    alt={founder.name}
+                    src={ceo.img}
+                    alt={ceo.name}
                     fill
                     sizes="(min-width:768px) 45vw, 100vw"
                     className="object-cover object-top grayscale contrast-110 transition-all duration-700 ease-out-expo group-hover:grayscale-0 group-hover:scale-[1.04]"
                   />
-                  <span className="mono absolute left-3 top-3 bg-paper/90 px-2 py-1 text-obsidian/70">01 · FOUNDER</span>
+                  <span className="mono absolute left-3 top-3 bg-paper/90 px-2 py-1 text-obsidian/70">01 · CEO</span>
                 </div>
                 <figcaption className="mt-4 border-t hair-d pt-3">
-                  <div className="text-[20px] font-semibold tracking-tight">{founder.name}</div>
+                  <div className="text-[20px] font-semibold tracking-tight">{ceo.name}</div>
                   <div className="mono mt-1 text-obsidian/50">
-                    {founder.role} · {founder.meta}
+                    {ceo.role} · {ceo.meta}
                   </div>
                 </figcaption>
               </motion.figure>
@@ -60,24 +60,23 @@ export default function Team() {
               >
                 <div className="relative aspect-[3/4] overflow-hidden bg-mist md:aspect-auto md:h-full md:min-h-[280px]">
                   <Image
-                    src={ceo.img}
-                    alt={ceo.name}
+                    src={founder.img}
+                    alt={founder.name}
                     fill
                     sizes="(min-width:768px) 30vw, 100vw"
                     className="object-cover object-top grayscale contrast-110 transition-all duration-700 ease-out-expo group-hover:grayscale-0 group-hover:scale-[1.04]"
                   />
-                  <span className="mono absolute left-3 top-3 bg-paper/90 px-2 py-1 text-obsidian/70">02 · CEO</span>
+                  <span className="mono absolute left-3 top-3 bg-paper/90 px-2 py-1 text-obsidian/70">02 · FOUNDER</span>
                 </div>
                 <figcaption className="mt-4 border-t hair-d pt-3">
-                  <div className="text-[18px] font-semibold tracking-tight">{ceo.name}</div>
+                  <div className="text-[18px] font-semibold tracking-tight">{founder.name}</div>
                   <div className="mono mt-1 text-obsidian/50">
-                    {ceo.role} · {ceo.meta}
+                    {founder.role} · {founder.meta}
                   </div>
                 </figcaption>
               </motion.figure>
             </div>
 
-            {/* Remaining team */}
             <div className="grid grid-cols-2 gap-x-5 gap-y-12 md:grid-cols-3">
               {rest.map((p, i) => (
                 <motion.figure
